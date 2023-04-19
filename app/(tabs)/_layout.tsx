@@ -1,6 +1,6 @@
 import { AntDesign, MaterialIcons, Ionicons } from '@expo/vector-icons';
-import { Link, Tabs } from 'expo-router';
-import { Pressable, useColorScheme } from 'react-native';
+import { Tabs } from 'expo-router';
+import { useColorScheme } from 'react-native';
 
 import Colors from '../../constants/Colors';
 
@@ -20,6 +20,7 @@ export default function TabLayout() {
 					tabBarIcon: ({ color }) => (
 						<AntDesign name="home" size={24} color={color} />
 					),
+					headerShown: false,
 				}}
 			/>
 			<Tabs.Screen
@@ -33,6 +34,7 @@ export default function TabLayout() {
 							color={color}
 						/>
 					),
+					headerShown: false,
 				}}
 			/>
 			<Tabs.Screen
@@ -42,6 +44,7 @@ export default function TabLayout() {
 					tabBarIcon: ({ color }) => (
 						<Ionicons name="search" size={24} color={color} />
 					),
+					headerShown: false,
 				}}
 			/>
 			<Tabs.Screen
@@ -51,6 +54,7 @@ export default function TabLayout() {
 					tabBarIcon: ({ color }) => (
 						<AntDesign name="download" size={24} color={color} />
 					),
+					headerShown: false,
 				}}
 			/>
 		</Tabs>
