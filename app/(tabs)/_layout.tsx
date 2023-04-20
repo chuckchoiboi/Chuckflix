@@ -4,7 +4,7 @@ import { useColorScheme } from 'react-native';
 
 import Colors from '../../constants/Colors';
 
-export default function TabLayout() {
+const TabLayout = (): JSX.Element => {
 	const colorScheme = useColorScheme();
 
 	return (
@@ -24,7 +24,7 @@ export default function TabLayout() {
 				}}
 			/>
 			<Tabs.Screen
-				name="ComingSoon"
+				name="coming-soon/index"
 				options={{
 					title: 'Coming Soon',
 					tabBarIcon: ({ color }) => (
@@ -38,7 +38,7 @@ export default function TabLayout() {
 				}}
 			/>
 			<Tabs.Screen
-				name="Search"
+				name="search/index"
 				options={{
 					title: 'Search',
 					tabBarIcon: ({ color }) => (
@@ -48,7 +48,7 @@ export default function TabLayout() {
 				}}
 			/>
 			<Tabs.Screen
-				name="Downloads"
+				name="downloads/index"
 				options={{
 					title: 'Downloads',
 					tabBarIcon: ({ color }) => (
@@ -59,4 +59,6 @@ export default function TabLayout() {
 			/>
 		</Tabs>
 	);
-}
+};
+
+export default TabLayout;
